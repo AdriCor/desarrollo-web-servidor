@@ -4,7 +4,6 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use DB;
 
 class TrainSeeder extends Seeder
 {
@@ -13,25 +12,12 @@ class TrainSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('trains')->insert([
-            [
-                'name'=>'rojo',
-                'passengers'=>300,
-                'year'=>2020,
-                'train_type_id'=>1
-            ],
-            [
-                'name'=>'azul',
-                'passengers'=>400,
-                'year'=>2021,
-                'train_type_id'=>2
-            ],
-            [
-                'nombre'=>'verde',
-                'passengers'=>350,
-                'year'=>2021,
-                'train_type_id'=>3
-            ]
-            ]);
+        [
+            'name'=>'Thomas',
+            'passengers'=>250,
+            'price'=>4.95,
+            'train_id'=>, //traerme el id del tren
+            'ticket_type_id'=> //traerrme el ide de tipos ticket
+        ],
     }
 }

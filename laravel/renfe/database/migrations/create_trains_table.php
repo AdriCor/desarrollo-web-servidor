@@ -17,7 +17,7 @@ return new class extends Migration
             $table->float('passengers');
             $table->float('year');
             $table->unsignedBigInteger('train_type_id');
-            $table->foreign('train_type_id')->references('id')->on('tipo_platos'); //falta seeder tipotrenes
+            $table->foreign('train_type_id')->references('id')->on('tipo_platos'); //falta seeder tipo trenes
             $table->timestamps();
         });
     }

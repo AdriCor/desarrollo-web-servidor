@@ -4,18 +4,18 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class TrainController extends Controller
+class TypeTrainController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $mensaje="Estos son mis trenes";
-        $teness=Train::all();
+        $mensaje="Estos son mis tipos de trenes";
+        $platos=Plato::all();
 
-        return view('trenes/index', 
-        ['mensaje' => $mensaje, 'trains'=>$trenes]
+        return view('platos/index', 
+        ['mensaje' => $mensaje, 'platos'=>$platos]
         );
     }
 
@@ -24,7 +24,7 @@ class TrainController extends Controller
      */
     public function create()
     {
-        return view('trenes/create');
+        //
     }
 
     /**
@@ -32,14 +32,7 @@ class TrainController extends Controller
      */
     public function store(Request $request)
     {
-        $trenes=new Train;
-        $trenes->name=$request->input('name');
-        $trenes->passengers=$request->input('passengers');
-        $trenes->year=$request->input('year');
-        $trenes->tipo=$request->input('tipo');
-        $trenes->save();
-
-        return redirect('platos');
+        //
     }
 
     /**
