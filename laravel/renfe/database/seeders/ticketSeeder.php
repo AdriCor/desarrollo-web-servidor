@@ -14,20 +14,22 @@ class ticketSeeder extends Seeder
     {
         DB::table('tickets')->insert([
             [
-                'date'=>'10:00',
-                'price'=>4.95,
-                'train_id'=>, //traerme el id del tren
-                'ticket_type_id'=> //traerrme el ide de tipos ticket
+                'date'=>'24/10/25',
+                'price'=>100,
+                'train_id'=>2,
+                'ticket_type_id'=> 3
             ],
             [
-                'nombre'=>'Chuletillas',
-                'precio'=>9.95,
-                'tipo_plato_id'=>2
+                'date'=>'23/7/24',
+                'price'=>50,
+                'train_id'=>3,
+                'ticket_type_id'=> 2
             ],
             [
-                'nombre'=>'Ensaladilla rusa',
-                'precio'=>3.5,
-                'tipo_plato_id'=>3
+                'date'=>'5/5/24',
+                'price'=>150,
+                'train_id'=>1,
+                'ticket_type_id'=> 1
             ]
             ]);
     }

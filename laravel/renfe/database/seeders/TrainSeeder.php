@@ -12,12 +12,26 @@ class TrainSeeder extends Seeder
      */
     public function run(): void
     {
+
+        DB::table('trains')->insert([
         [
             'name'=>'Thomas',
             'passengers'=>250,
-            'price'=>4.95,
-            'train_id'=>, //traerme el id del tren
-            'ticket_type_id'=> //traerrme el ide de tipos ticket
+            'year'=>1984,
+            'train_type_id'=> 3
         ],
+        [
+            'name'=>'Jack, la Locomotora',
+            'passengers'=>150,
+            'year'=>1962,
+            'train_type_id'=> 1
+        ],
+        [
+            'name'=>'Emily',
+            'passengers'=>300,
+            'year'=>1983,
+            'train_type_id'=> 2
+        ]
+        ]);
     }
 }

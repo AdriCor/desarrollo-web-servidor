@@ -15,9 +15,9 @@ return new class extends Migration
             $table->id();
             $table->String('name');
             $table->float('passengers');
-            $table->float('year');
+            $table->float('year'); //no me gusta que sea floatm, pero weno
             $table->unsignedBigInteger('train_type_id');
-            $table->foreign('train_type_id')->references('id')->on('tipo_platos'); //falta seeder tipo trenes
+            $table->foreign('train_type_id')->references('id')->on('train_types'); 
             $table->timestamps();
         });
     }

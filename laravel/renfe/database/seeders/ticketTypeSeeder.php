@@ -12,7 +12,7 @@ class ticketType extends Seeder
      */
     public function run(): void
     {
-        DB::table('ticket_type')->insert([
+        DB::table('ticket_types')->insert([
             [
                 'ticket_type' => 'Billete sencillo'
             ],

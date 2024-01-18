@@ -12,7 +12,7 @@ class TypeTrainSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('train_type')->insert([
+        DB::table('train_types')->insert([
             [
                 'train_type' => 'Cercanias'
             ],
