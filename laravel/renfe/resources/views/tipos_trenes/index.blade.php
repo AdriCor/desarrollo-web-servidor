@@ -10,14 +10,14 @@
     <h1>Tipos de trenes</h1>
 
     <ul>
-        @foreach ($tipos_trenes as $tipo_tren)
-            <li>{{$tipo_tren->tipos_trenes}}</li>
+        @foreach ($train_types as $train_type)
+            <li>{{$train_type->train_types}}</li>
             <ul>
                 @php
-                    $platos=$tipo_plato->platos;
+                    $trains=$train_type->trains;
                 @endphp
-                @foreach ($platos as $plato)
-                    <li>{{$plato->nombre}}</li>
+                @foreach ($trains as $train)
+                    <li>{{$train->name}}</li>
                 @endforeach
             </ul>
         @endforeach

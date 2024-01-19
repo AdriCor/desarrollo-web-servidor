@@ -12,10 +12,10 @@ class TrainController extends Controller
     public function index()
     {
         $mensaje="Estos son mis trenes";
-        $teness=Train::all();
+        $trains=Train::all();
 
         return view('trenes/index', 
-        ['mensaje' => $mensaje, 'trains'=>$trenes]
+        ['mensaje' => $mensaje, 'trenes'=>$trains]
         );
     }
 

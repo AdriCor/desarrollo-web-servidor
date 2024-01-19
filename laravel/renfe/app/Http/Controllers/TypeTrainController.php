@@ -11,12 +11,11 @@ class TypeTrainController extends Controller
      */
     public function index()
     {
-        $mensaje="Estos son mis tipos de trenes";
-        $platos=Plato::all();
+        $train_types= TrainType::all();
 
-        return view('platos/index', 
-        ['mensaje' => $mensaje, 'platos'=>$platos]
-        );
+        return view('tipos_trenes/index', [
+            'tipos_trenes' => $train_types    
+        ]);
     }
 
     /**
