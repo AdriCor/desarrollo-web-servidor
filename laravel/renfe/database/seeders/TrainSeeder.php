@@ -14,7 +14,7 @@ class TrainSeeder extends Seeder
     public function run(): void
     {
 
-        DB::table('trains')->insert([
+        DB::table('Train')->insert([
         [
             'name'=>'Thomas',
             'passengers'=>250,

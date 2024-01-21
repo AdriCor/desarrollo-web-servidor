@@ -10,25 +10,25 @@
     <h2>{{$mensaje}}</h2>
     
     <p>
-      <a href="{{route('platos.create')}}">Crear Tren</a>
+      <a href="{{route('Train.create')}}">Crear Tren</a>
     </p>
     <table class="table">
   <thead>
     <tr>
-      <th >nombre</th>
-      <th >Pasajeros</th>
-      <th >año</th>
+      <th>nombre</th>
+      <th>Pasajeros</th>
+      <th>año</th>
       <th>tipo de tren</th>
       <th></th>
     </tr>
   </thead>
   <tbody>
-     @foreach($trenes as $tren)
+     @foreach($trains as $train)
      <tr>
-        <td>{{$trenes->name}}</td>
-        <td>{{$trenes->passengers}}</td>
-        <td>{{$trenes->year}}</td>
-        <td>{{$trenes->tipo_trenes['train_type_id']}}</td>
+        <td>{{$train->name}}</td>
+        <td>{{$train->passengers}}</td>
+        <td>{{$train->year}}</td>
+        <td>{{$train->type['TrainType']}}</td>
         <td>
           <form method="get" 
             action="{{route('trenes.show',['train'=>$tren->id])}}"> {{-- falta el show --}}

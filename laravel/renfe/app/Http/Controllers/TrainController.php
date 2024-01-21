@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Train;
 
 class TrainController extends Controller
 {
@@ -15,7 +16,7 @@ class TrainController extends Controller
         $trains=Train::all();
 
         return view('trenes/index', 
-        ['mensaje' => $mensaje, 'trenes'=>$trains]
+        ['mensaje' => $mensaje, 'Train'=>$trains]
         );
     }
 
@@ -39,7 +40,7 @@ class TrainController extends Controller
         $trenes->tipo=$request->input('tipo');
         $trenes->save();
 
-        return redirect('platos');
+        return redirect('Train');
     }
 
     /**

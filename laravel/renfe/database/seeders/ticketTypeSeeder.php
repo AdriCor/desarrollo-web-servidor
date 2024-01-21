@@ -6,22 +6,22 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use DB;
 
-class ticketType extends Seeder
+class ticketTypeSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-        DB::table('ticket_types')->insert([
+        DB::table('TicketType')->insert([
             [
-                'ticket_type' => 'Billete sencillo'
+                'type' => 'Billete sencillo'
             ],
             [
-                'ticket_type' => 'Abono mensual'
+                'type' => 'Abono mensual'
             ],
             [
-                'ticket_type' => 'Abono trimestral'
+                'type' => 'Abono trimestral'
             ]
             ]);
     }

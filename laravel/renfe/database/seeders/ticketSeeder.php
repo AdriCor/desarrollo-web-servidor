@@ -13,7 +13,7 @@ class ticketSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('tickets')->insert([
+        DB::table('Ticket')->insert([
             [
                 'date'=>'24/10/25',
                 'price'=>100,

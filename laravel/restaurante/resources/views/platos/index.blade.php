@@ -37,7 +37,7 @@
         </td>
         <td>
           <form method="get"
-            action="{{route('platos.edit',['plato'=>$plato->id])}}">
+            action="{{route('Train.edit',['plato'=>$plato->id])}}">
             <input type="submit" value="editar">
             </form>
         </td>

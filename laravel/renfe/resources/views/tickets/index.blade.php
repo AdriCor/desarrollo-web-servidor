@@ -4,26 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Tipos de trenes</title>
+    <title>Tickets</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 <body>
-    <h1>Tipos de trenes</h1>
+    <h1>Tickets</h1>
     <p>
-      <a href="{{route('TrainType.create')}}">Crear Tren</a>
+      <a href="{{route('Ticket.create')}}">Crear Ticket</a>
     </p>
 
     <table class="table">
     <thead>
         <tr>
-        <th>Tipo de tren</th>
+        <th>Tickets</th>
         <th></th>
         </tr>
     </thead>
     <tbody>
-     @foreach($train_types as $train_type)
+     @foreach($tickets as $ticket)
      <tr>
-        <td>{{$train_type->type['TrainType']}}</td>
+        <td>{{$ticket->date}}</td>
+        <td>{{$ticket->price}}</td>
+        <td>{{$ticket->id['Train']}}</td>
+        <td>{{$ticket->id['TicketType']}}</td>
         <td>
           <form method="get" 
             action="{{route('trenes.show',['train'=>$tren->id])}}"> {{-- falta el show --}}

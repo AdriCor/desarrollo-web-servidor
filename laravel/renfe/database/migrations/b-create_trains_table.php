@@ -11,13 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('trains', function (Blueprint $table) {
+        Schema::create('Train', function (Blueprint $table) {
             $table->id();
             $table->String('name');
             $table->float('passengers');
             $table->float('year'); //no me gusta que sea floatm, pero weno
             $table->unsignedBigInteger('train_type_id');
-            $table->foreign('train_type_id')->references('id')->on('train_types'); 
+            $table->foreign('train_type_id')->references('id')->on('TrainType'); 
             $table->timestamps();
         });
     }
@@ -27,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('trains');
+        Schema::dropIfExists('Train');
     }
 };

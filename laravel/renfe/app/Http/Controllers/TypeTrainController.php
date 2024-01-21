@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\TrainType;
 
 class TypeTrainController extends Controller
 {
@@ -14,7 +15,7 @@ class TypeTrainController extends Controller
         $train_types= TrainType::all();
 
         return view('tipos_trenes/index', [
-            'tipos_trenes' => $train_types    
+            'TrainType' => $train_types   
         ]);
     }
 
@@ -23,7 +24,7 @@ class TypeTrainController extends Controller
      */
     public function create()
     {
-        //
+        return view('tipos_trenes/create');
     }
 
     /**
